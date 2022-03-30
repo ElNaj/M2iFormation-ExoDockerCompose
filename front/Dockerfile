@@ -1,3 +1,4 @@
+# Dockerfile Front
 FROM node:14-alpine AS build
 WORKDIR /usr/src/app
 COPY ./package.json .
@@ -7,4 +8,4 @@ RUN npm run build
 
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html 
-COPY --from=build /usr/src/app/dist .
+COPY --from=build /usr/src/app/dist . 
