@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
+
+
 export const setMongoConnection = () => {
-    const mongoUrl = `mongodb://${process.env["MONGO_HOST"] || "localhost"}:27017`;
+    const mongoUrl = `mongodb://${process.env["MONGO_HOST"] || "localhost"}:27017`; 
     console.log(mongoUrl)
     mongoose.connect(mongoUrl, {
         useCreateIndex: true,
